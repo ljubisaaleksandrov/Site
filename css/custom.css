@@ -40,6 +40,8 @@
 .two-image-banner-section	> div		{ height: 500px; float: left; overflow: hidden; width: 49%;}
 .two-image-banner-section	> div > img	{ height: 100%; float: left; }
 
+.letter-space-big			{ letter-spacing: 8px; }
+
 /* #endregion Global */
 
 
@@ -179,11 +181,12 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 
 .customization-banner-section 				{ margin: 50px 0px; display: inline-block; }
 .customization-banner-section > hr			{ border-top: 3px solid black; }
-.customization-banner-section > h1 > span 	{ color: white; padding: 3px 6px; }			
+.customization-banner-section > h1 			{ padding: 1px 0px; }			
+.customization-banner-section > h1 > span 	{ color: white; padding: 0px 6px; }			
 .customization-banner-text					{ font-size: 18px; display: inline-block; margin-top: 20px;}
 
 .customization-content-section 				{ margin: 50px 0px; display: inline-block; width: 100%; }
-.customization-content-section > h1 > span 	{ color: white; padding: 3px 6px; }			
+.customization-content-section > h1 > span 	{ color: white; padding: 3px 6px; padding-left: 50px; }			
 .customization-content-section > hr			{ border-top: 2px solid black; }
 
 .customization-content						{ display: inline-block; margin-top: 30px; }
