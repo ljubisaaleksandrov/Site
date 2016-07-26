@@ -48,6 +48,11 @@ function adjustImagesDimenstions(){
 			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
 		}
 	});
+	
+	$.each($('.contact-social-links-image'), function(index, element){
+		var width = parseInt($(element).css('width'));
+		// $(element).css({'height': width - 1 + 'px'});
+	});
 }
 
 function alignColoredTitle(){
