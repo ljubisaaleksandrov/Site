@@ -52,7 +52,7 @@
 #brickhaus-menu						{ display: inline-block; list-style-type: none; padding-left: 0px; float: left; z-index: 100; position: absolute; top: 0px; }
 .menu-item							{ padding: 5px 20px; background-color: black; color: white; margin: 0px; font-size: 16px; cursor: pointer; }
 h3.menu-item 						{ display: inline-block !important; display: inline-block;}
-li.menu-item 							{ padding-left: 40px !important; display: table;}
+li.menu-item 						{ padding-left: 40px !important; display: table;}
 li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 #brickhaus-menu	> li > ul				{ padding: 0px; }
 #brickhaus-menu > li > ul > li > a 		{ color: white; text-decoration: none }
@@ -60,7 +60,7 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 #brickhaus-menu > li > ul > li.active	{ background-color: red }
 
 .logo								{ position: absolute; top: 106px; left: 25%; right: 25%; }
-.logo > img							{ display: block; margin-left: auto;  margin-right: auto; }
+.logo > img							{ display: block; margin-left: auto;  margin-right: auto; max-width: 100%; }
 
 /* #endregion Header */
 
@@ -181,12 +181,12 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 
 .customization-banner-section 				{ margin: 50px 0px; display: inline-block; }
 .customization-banner-section > hr			{ border-top: 3px solid black; }
-.customization-banner-section > h1 			{ padding: 1px 0px; }			
-.customization-banner-section > h1 > span 	{ color: white; padding: 0px 6px; }			
-.customization-banner-text					{ font-size: 18px; display: inline-block; margin-top: 20px;}
+.customization-banner-section > h2 			{ word-break: break-word; }			
+.customization-banner-section > h2 > span 	{ color: white; padding: 3px 10px; display: inline-block; }			
+.customization-banner-text					{ font-size: 16px; display: inline-block; margin-top: 20px;}
 
 .customization-content-section 				{ margin: 50px 0px; display: inline-block; width: 100%; }
-.customization-content-section > h1 > span 	{ color: white; padding: 3px 6px; padding-left: 50px; }			
+.customization-content-section > h2 > span 	{ color: white; padding: 3px 6px; padding-left: 50px; margin-right: 8px; display: inline-block; }			
 .customization-content-section > hr			{ border-top: 2px solid black; }
 
 .customization-content						{ display: inline-block; margin-top: 30px; }
@@ -206,6 +206,33 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 
 #customVerticalLine							{ height: 100%; width: 1px; background-color: black; position: absolute; left: 50%; right: 50%; top: -50px; z-index: -1; }
 /* #endregion Customization */
+
+
+/* #region Contact */
+
+.contact-content-section					{ display: inline-block; width: 100%; }
+
+/* #endregion Contact */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
