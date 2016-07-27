@@ -60,9 +60,13 @@ function adjustImagesDimenstions(){
 		}
 	});
 	
-	$.each($('.contact-social-links-image'), function(index, element){
+	$.each($('.e-river-content-left > img'), function(index, element){
+		var parentWidth = parseInt($('.e-river-content-left').css('width'));
+		$(element).css({'height': parentWidth + 'px'});
+
 		var width = parseInt($(element).css('width'));
-		// $(element).css({'height': width - 1 + 'px'});
+		var difference = width - parentWidth;
+		$(element).css({'margin-left': -difference/2 + 'px' });
 	});
 }
 

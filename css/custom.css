@@ -23,6 +23,7 @@
 .color-dark-blue			{ color: #43566f; }
 .color-light-gray			{ color: #ccc7c4; }
 .color-dark-gray			{ color: #9c9a99; }
+.color-red					{ color: #d34122; }
 
 .page-title					{ height:80px; width: 100%; margin-bottom: 10px; display: inline-table; }
 .page-title-side-container	{ background-color: #43566f; height: 90px; width: 15px; }
@@ -33,7 +34,7 @@
 .quote-left	> img			{ position: absolute; right: 0px; top: -10px; }
 .quote-right > img			{ position: absolute; left: 0px; }
 .quotes-text,
-.quotes-author				{ font-size: 22px; display: block; margin: 10px auto; float: left; text-transform: uppercase; }
+.quotes-author				{ font-size: 22px; display: block; margin: 10px auto; float: left; text-transform: uppercase; width: 100%; }
 .quotes-author				{ font-size: 20px; }
 
 .two-image-banner-section				{ width: 100%; display: inline-block; margin-top: 30px; margin-bottom: 50px; }
@@ -266,12 +267,37 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 
 /* #endregion About */
 
+/* #region Eleven River */
+
+.e-river-banner								{ width: 100%; max-height: 600px; display: inline-block; margin-top: 40px; margin-bottom: 20px; overflow: hidden; }
+.e-river-banner > img						{ width: 100%; }
+
+.e-river-title-section						{ display: inline-block; width: 100%; }
+.e-river-title-section > h1					{ display: inline-block; margin-top: -5px; margin-bottom: 0px; padding: 10px; max-width: 200px; }
+.e-river-title-hr							{ border-top: 3px solid black; margin-top: 15px; margin-left: 25px; margin-right: 15px; }
+.e-river-title-border						{ height: 110px; width: 15px; }
+
+.e-river-content-section					{ width: 100%; display: inline-block; }
+.e-river-content-left						{ display: inline-block; overflow: hidden; }
+.e-river-content-left > img					{ max-height: 100%; padding-bottom: 20px; display: inline-block; }
+.e-river-content-right						{ display: inline-block; padding-left: 7%; }
+.e-river-content-right-title				{ width: 100%; margin: 20px 0px; }
+.e-river-content-right-title-colored		{ color: white; }
+.e-river-content-right-title > div > h3		{ margin: 0px; padding: 5px; }	
+.e-river-content-right-text					{ width: 100%; display: inline-block; margin: 20px 0px; white-space: pre-line; }
+.e-river-content-right-sold					{ width: 180px; }
+.e-river-content-right-sold	> hr			{ border-top: 2px solid black; width: 100%;  }
+
+/* #endregion Eleven River */
+
+/* #region Browstone */
+
+.browstone-title-big-section					{ display: inline-block; width: 100%; }
+.browstone-title-big-section > h1				{ display: inline-block; margin-top: 55px; padding: 5px; }
+.browstone-title-big-section > hr				{ border-top: 2px solid black; width: 80%; margin-top: 0px; }
 
 
-
-
-
-
+/* #endregion Browstone */
 
 
 
