@@ -8,14 +8,14 @@ $(document).ready(function (){
 	length = $(".footer-content-info").css('height');
 	$("#footerVerticalLine").css({'height':length});
 	
-	adjustDimensions();
 	adjustImagesDimenstions();
+	adjustDimensions();
 	alignColoredTitle();
 });
 
 $(window).resize(function(){
-	adjustDimensions();
 	adjustImagesDimenstions();
+	adjustDimensions();
 	alignColoredTitle();
 });
 
@@ -31,13 +31,27 @@ function adjustDimensions(){
 	
 	length = $('.about-title-small-content').css('height');
 	$("#aboutVerticalLine").css({'height': length});
+
+	length = parseInt($('.browstone-title-section').css('width'));
+	$(".browstone-title-hr").css({'width': length - 60 + 'px'});
+
+	length = $('.browstone-content-left').css('height');
+	$("#browstoneVerticalLine").css({'height': length});
 };
 
 function adjustImagesDimenstions(){
+	if($('.front-page-featured-item-image').length != 0){
+		$.each($('.front-page-featured-item-image').find('img'), function(index, element){
+			if(parseInt($(element).css('height')) < parseInt($(element).css('width'))){
+				$(element).css({'height':'100%', 'width': 'auto'});
+			}
+		});
+	}
+	
 	if($('.two-image-banner-section').length != 0){
 		$.each($('.two-image-banner-section').find('img'), function(index, element){
 			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
-				$(element).css({'width':'100%', 'height': 'none'});
+				$(element).css({'width':'100%', 'height': 'auto'});
 			}
 		});
 	}
@@ -45,7 +59,7 @@ function adjustImagesDimenstions(){
 	if($('.three-image-banner-section').length != 0){
 		$.each($('.three-image-banner-section').find('img'), function(index, element){
 			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
-				$(element).css({'width':'100%', 'height': 'none'});
+				$(element).css({'width':'100%', 'height': 'auto'});
 			}
 		});
 	}
@@ -62,6 +76,15 @@ function adjustImagesDimenstions(){
 	
 	$.each($('.e-river-content-left > img'), function(index, element){
 		var parentWidth = parseInt($('.e-river-content-left').css('width'));
+		$(element).css({'height': parentWidth + 'px'});
+
+		var width = parseInt($(element).css('width'));
+		var difference = width - parentWidth;
+		$(element).css({'margin-left': -difference/2 + 'px' });
+	});
+
+	$.each($('.browstone-content-right > img'), function(index, element){
+		var parentWidth = parseInt($('.browstone-content-right').css('width'));
 		$(element).css({'height': parentWidth + 'px'});
 
 		var width = parseInt($(element).css('width'));
