@@ -28,11 +28,22 @@ function adjustDimensions(){
 	
 	length = parseInt($('.customization-content').css('height'));
 	$("#customVerticalLine").css({'height': length + 150 + 'px'});
+	
+	length = $('.about-title-small-content').css('height');
+	$("#aboutVerticalLine").css({'height': length});
 };
 
 function adjustImagesDimenstions(){
 	if($('.two-image-banner-section').length != 0){
 		$.each($('.two-image-banner-section').find('img'), function(index, element){
+			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
+				$(element).css({'width':'100%', 'height': 'none'});
+			}
+		});
+	}
+	
+	if($('.three-image-banner-section').length != 0){
+		$.each($('.three-image-banner-section').find('img'), function(index, element){
 			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
 				$(element).css({'width':'100%', 'height': 'none'});
 			}

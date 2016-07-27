@@ -40,6 +40,11 @@
 .two-image-banner-section	> div		{ height: 500px; float: left; overflow: hidden; width: 49%;}
 .two-image-banner-section	> div > img	{ height: 100%; float: left; }
 
+.three-image-banner-section				{ width: 100%; display: inline-block; margin-top: 10px; margin-bottom: 50px; }
+.three-image-banner-section	> div		{ height: 400px; float: left; overflow: hidden; width: 32%;}
+.three-image-banner-section	> div > img	{ height: 100%; float: left; }
+.three-image-banner-section	> div:nth-child(2)	{ margin: 0% 2%; }
+
 .letter-space-big			{ letter-spacing: 8px; }
 
 /* #endregion Global */
@@ -228,9 +233,33 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 
 /* #endregion Contact */
 
+/* #region About */
 
+.about-banner-section						{ display: inline-block; margin: 20px 0px; }
+.about-banner-section > hr					{ border-top: 3px solid black; width: 100%; }
+.about-title-border							{ height: 100px; width: 15px; }
 
+.about-title-small-section					{ display: inline-block; width:100% }
+.about-title-small-content					{ width: 80%; margin-left: 15px; }
+.about-title-small-content > h2				{ margin-top: 75px; display: inline-block; }
+.about-title-small-content > span			{ display: inline-block; }
 
+.about-title-big-section					{ display: inline-block; width: 100%; }
+.about-title-big-section > h1				{ display: inline-block; margin-top: 55px; padding: 5px; }
+.about-title-big-section > hr				{ border-top: 2px solid black; width: 80%; margin-top: 0px; }
+
+.about-content-section						{ display: inline-block; margin: 20px 0px; }
+.about-content-item							{ width: 100%; display: inline-block; margin-bottom: 20px; }
+.about-content-item-left					{ display: inline; width: 33%; float: left; }
+.about-content-item-right					{ display: inline; width: 64%; float: left; }
+.about-content-item-right-text				{ display: inline-block; width: 100%; }
+.about-content-item-right-text > span		{ display: inline-block; width: 80%; float: left;}	
+.about-content-item-title					{ display: inline-block; padding: 2px; color: white; margin-bottom: 20px; }
+.about-content-item-title-extension			{ width: 100% }
+
+#aboutVerticalLine							{ width: 1px; background-color: black; position: absolute; margin-left: -10px; }
+
+/* #endregion About */
 
 
 
