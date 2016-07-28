@@ -41,10 +41,12 @@
 .two-image-banner-section				{ width: 100%; display: inline-block; margin-top: 30px; margin-bottom: 50px; }
 .two-image-banner-section	> div		{ height: 500px; float: left; overflow: hidden; width: 49%;}
 .two-image-banner-section	> div > img	{ height: 100%; float: left; }
+.two-image-banner-section-span-first	{ position: absolute; padding: 5px; padding-left: 20px; bottom: 80px; background-color: #d34122; color: white; width: 230px; max-width: 100%; font-size: 20px; }
+.two-image-banner-section-span-second	{ position: absolute; padding: 3px; padding-left: 20px; bottom: 30px; background-color: white; width: 180px; max-width: 100%; font-size: 18px; }
 
 .three-image-banner-section				{ width: 100%; display: inline-block; margin-top: 10px; margin-bottom: 50px; }
-.three-image-banner-section	> div		{ height: 400px; float: left; overflow: hidden; width: 32%;}
-.three-image-banner-section	> div > img	{ height: 100%; float: left; }
+.three-image-banner-section	> div		{ height: 400px; float: left; overflow: hidden; width: 32%; }
+.three-image-banner-section	> div > img	{ width: 100%; float: left; }
 .three-image-banner-section	> div:nth-child(2)	{ margin: 0% 2%; }
 
 .letter-space-big			{ letter-spacing: 8px; }
@@ -309,22 +311,76 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 .browstone-content-left-title				{ width: 100%; margin: 20px 0px; }
 .browstone-content-left-title > h3 > span	{ padding-left: 30px; color: white; }
 .browstone-content-left-text-container		{ padding-left: 0px; }
-.browstone-content-left-text				{ width: 100%; display: inline-block; margin: 20px 0px; white-space: pre-line; }
+.browstone-content-left-text-container > h3	{ margin-bottom: 0px; }
+.browstone-content-left-text				{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; }
 .browstone-content-left-sold				{ width: 180px; }
 .browstone-content-left-sold	> hr		{ border-top: 2px solid black; width: 100%; }
 
 #browstoneVerticalLine						{ width: 2px; background-color: black; position: absolute; margin-left: -30px; }
 
-
 /* #endregion Browstone */
 
+/* #region Charitable */
+
+.charitable-title-section						{ display: inline-block; width: 100%; margin: 30px 0px; }
+.charitable-title-content > h1					{ display: inline-block; margin-top: -5px; margin-bottom: 0px; padding: 10px 0px; max-width: 700px; }
+.charitable-title-border						{ height: 110px; width: 15px; position: absolute; }
+.charitable-title-content						{ display: inline-block; width: 100%; padding-left: 50px; }
+.charitable-title-text							{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; font-size: 16px; }
+
+.charitable-content-section						{ display: inline-block; width: 100%; margin: 20px 0px; }
+
+#charitableVerticalLine							{ width: 2px; background-color: black; position: absolute; margin-left: -20px; }
+
+/* #endregion Charitable */
+
+/* #region Communities */
+
+.communities-title-section						{ display: inline-block; width: 100%; }
+.communities-title-section > hr					{ border-top: 3px solid black; width: 96%; }
+.communities-title-section-left,
+.communities-title-section-right				{ padding: 0px; margin-bottom: 10px; }
+.communities-title-section-left > h2 > span		{ display: inline-block; width: 100%; }
+.communities-title-colored						{ color: white; display: inline-block; }
+
+.communities-title-text-container				{ display: inline-block; font-family: open-sans; font-size: 16px; }
+.communities-title-content						{ padding-left: 20px; }
+.communities-title-content > span				{ display: inline-block; width: 70%; }
+
+.communities-side-title							{ display: inline-block; width: 100%; text-align: right;}
+.communities-title-border						{ height: 100px; width: 15px; }
+.communities-side-title > h1						{ margin-top: 65px; margin-left: 10px; }
+
+.communities-filters-section					{ min-height: 100px; width:100%; display: inline-block; text-align: center; overflow: auto; padding-top: 20px; margin-top: 40px;}
+.communities-filters-section > a					{ display: inline-block; margin: 10px 20px; color: black; text-decoration: none; }
+.communities-filters-section > a.active			{ color: #d34122; }
+.communities-filters-section > a > h3			{ margin: 5px 20px }
+.communities-filters-all						{ border: 1px solid #d34122; }
+
+.communities-banner-section,					
+.communities-upcoming-section,
+.communities-results-section					{ display: inline-block; width: 100%; margin-top: 40px; }
+.communities-banner-item,
+.communities-upcoming-item,
+.communities-results-item						{ margin-bottom: 10px; }
+.communities-banner-item-image,
+.communities-upcoming-item-image,
+.communities-results-item-image					{ width: 100%; overflow: hidden; margin-bottom: 10px; display: inline-block; }
+.communities-banner-item-image > img,
+.communities-upcoming-item-image > img,
+.communities-results-item-image > img			{ width: 100%; }
+
+.communities-filters-register-button			{ display: inline-block; margin-bottom: 30px; border: 1px solid #d34122; color: #d34122; float: right; text-decoration: none; }
+.communities-filters-register-button:hover		{ text-decoration: none; color: #d34122; }
+.communities-filters-register-button > h3		{ margin: 5px 20px }
+
+.communities-upcoming-span-first				{ position: absolute; padding: 5px; padding-left: 20px; bottom: 80px; background-color: #adc214; color: white; width: 200px; max-width: 100%; font-size: 20px; }
+.communities-upcoming-span-second				{ position: absolute; padding: 3px; padding-left: 20px; bottom: 30px; background-color: white; width: 180px; max-width: 100%; font-size: 18px; }
 
 
+#communitiesVerticalLine						{ width: 1px; background-color: black; position: absolute; left: 0; }
 
-
-
-
-
+/* #endregion Communities */
 
 
 

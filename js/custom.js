@@ -37,6 +37,25 @@ function adjustDimensions(){
 
 	length = $('.browstone-content-left').css('height');
 	$("#browstoneVerticalLine").css({'height': length});
+
+	length = $('.charitable-title-section').css('height');
+	$("#charitableVerticalLine").css({'height': length});
+
+	length = $('.communities-title-text-container').css('height');
+	$("#communitiesVerticalLine").css({'height': length});
+
+	if($(window).width() < 992){
+		$.each($(".communities-filters-section"), function(index, element){
+			$(element).find('a').css({'margin': '10px 10px'});
+			$(element).find('h3').css({'margin': '5px 10px'});
+		});
+	}
+	else{
+		$.each($(".communities-filters-section"), function(index, element){
+			$(element).find('a').css({'margin': '10px 20px'});
+			$(element).find('h3').css({'margin': '5px 20px'});
+		});
+	}
 };
 
 function adjustImagesDimenstions(){
@@ -58,13 +77,44 @@ function adjustImagesDimenstions(){
 	
 	if($('.three-image-banner-section').length != 0){
 		$.each($('.three-image-banner-section').find('img'), function(index, element){
-			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
-				$(element).css({'width':'100%', 'height': 'auto'});
+			$(element).parent().css({'height': $(element).parent().css('width')});
+			if(parseInt($(element).css('height')) < parseInt($(element).css('width'))){
+				$(element).css({'height':'100%', 'width': 'auto'});
 			}
 		});
 	}
 	
 	$.each($('.team-members-item-image'), function(index, element){
+		$(element).css('height', $(element).css('width'));
+		var image = $(element).find('img');
+
+		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
+			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
+			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
+		}
+	});
+	
+	$.each($('.communities-results-item-image'), function(index, element){
+		$(element).css('height', $(element).css('width'));
+		var image = $(element).find('img');
+
+		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
+			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
+			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
+		}
+	});
+	
+	$.each($('.communities-upcoming-item-image'), function(index, element){
+		$(element).css('height', $(element).css('width'));
+		var image = $(element).find('img');
+
+		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
+			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
+			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
+		}
+	});
+	
+	$.each($('.communities-banner-item-image'), function(index, element){
 		$(element).css('height', $(element).css('width'));
 		var image = $(element).find('img');
 
