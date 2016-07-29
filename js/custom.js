@@ -1,12 +1,13 @@
 $(document).ready(function (){
 	$('#brickhaus-menu').lazeemenu('collapseAll');
 	
-	var length = parseInt($("#verticalLineUp").css('height')) + 20;
-	$("#verticalLineUp").css({'height': length + 'px'});
-	$("#verticalLineDown > div").css({'height': length + 'px', 'bottom': length - 84 + 'px'});
-
-	length = $(".footer-content-info").css('height');
-	$("#footerVerticalLine").css({'height':length});
+	$('.media-images-item-image').bind('mouseover', function() {
+		$(this).addClass('show_info');
+	});
+	
+	$('.media-images-item-image').bind('mouseout', function() {
+		$(this).removeClass('show_info');
+	});
 	
 	adjustImagesDimenstions();
 	adjustDimensions();
@@ -20,10 +21,17 @@ $(window).resize(function(){
 });
 
 function adjustDimensions(){
+	var length = parseInt($("#verticalLineUp").css('height')) + 20;
+	$("#verticalLineUp").css({'height': length + 'px'});
+	$("#verticalLineDown > div").css({'height': length + 'px', 'bottom': length - 84 + 'px'});
+
+	length = $(".footer-content-info").css('height');
+	$("#footerVerticalLine").css({'height':length});
+
 	var width = $(".front-page-featured-item-image").css('width');
 	$(".front-page-featured-item-image-text").css({'width': width });
 
-	var length = parseInt($(".quotes-text").css('height'));
+	length = parseInt($(".quotes-text").css('height'));
 	$(".quote-right > img").css({'top': length + 'px'});
 	
 	length = parseInt($('.customization-content').css('height'));
@@ -55,6 +63,15 @@ function adjustDimensions(){
 			$(element).find('a').css({'margin': '10px 20px'});
 			$(element).find('h3').css({'margin': '5px 20px'});
 		});
+	}
+	
+	if($('.live-smarter-content-right').length > 0){
+		var image = $('.live-smarter-content-right').find('img');
+		var imageHeight = parseInt($(image).height());
+		var maskHeight = imageHeight / 11;
+		$('.live-smarter-content-right-mask-first').css({'height': maskHeight + 'px', 'top': maskHeight * 2 + 'px'});
+		$('.live-smarter-content-right-mask-second').css({'height': maskHeight + 'px', 'top': maskHeight * 5 + 'px'});
+		$('.live-smarter-content-right-mask-third').css({'height': maskHeight + 'px', 'top': maskHeight * 8 + 'px'});
 	}
 };
 
@@ -97,6 +114,17 @@ function adjustImagesDimenstions(){
 	$.each($('.communities-results-item-image'), function(index, element){
 		$(element).css('height', $(element).css('width'));
 		var image = $(element).find('img');
+
+		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
+			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
+			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
+		}
+	});
+	
+	$.each($('.media-images-item-image'), function(index, element){
+		$(element).css('height', $(element).css('width'));
+		var image = $(element).find('img');
+		
 
 		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
 			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
@@ -159,5 +187,34 @@ function alignColoredTitle(){
 			$(h2).css({'background': 'none'});
 		}
 	};
-
 }
+
+
+
+
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+	vid.classList.add("stopfade");
+}
+
+// vid.addEventListener('ended', function()
+// {
+	// // only functional if "loop" is removed 
+	// vid.pause();
+	// // to capture IE10
+	// vidFade();
+// }); 
+
+
+// pauseButton.addEventListener("click", function() {
+	// vid.classList.toggle("stopfade");
+	// if (vid.paused) {
+		// vid.play();
+		// pauseButton.innerHTML = "Pause";
+	// } else {
+		// vid.pause();
+		// pauseButton.innerHTML = "Paused";
+	// }
+// })
