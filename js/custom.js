@@ -28,6 +28,13 @@ function adjustDimensions(){
 	$("#verticalLineUp").css({'height': length + 'px'});
 	$("#verticalLineDown > div").css({'height': length + 'px', 'bottom': length - 84 + 'px'});
 
+	if($(window).width() < 992){
+		$("#verticalLineDown > div").css({'left': '0px'}); 
+	}
+	else{
+		$("#verticalLineDown > div").css({'left': '40px'}); 
+	}
+	
 	length = $(".footer-content-info").css('height');
 	$("#footerVerticalLine").css({'height':length});
 
@@ -57,6 +64,10 @@ function adjustDimensions(){
 	
 	width = $('.communities-results-item-image').css('width');
 	$(".communities-results-item-image").find('div').css({'width': width});
+	
+	length = $('.front-page-banner-content').css('height');
+	$(".front-page-banner-content").find('img').css({'height': length});
+	
 	
 
 	if($(window).width() < 992){
