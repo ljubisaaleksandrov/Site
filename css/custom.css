@@ -374,6 +374,11 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 .communities-filters-register-button:hover		{ text-decoration: none; color: #d34122; }
 .communities-filters-register-button > h3		{ margin: 5px 20px }
 
+.communities-results-item-image:hover > div 		{ opacity: 0.9 }
+.communities-results-item-image > div			{ display: inline-block; color: white; opacity: 0; width: 100%; position: absolute; bottom: 15px; padding: 10px; text-align: center; font-family: open-sans; transition:opacity 250ms ease-in;}
+.communities-results-item-image > div > span		{ display: inline-block; width: 100%; }
+.communities-results-item-image > div > h4		{ display: inline-block; width: 100%; text-transform: uppercase; }
+
 .communities-upcoming-span-first				{ position: absolute; padding: 5px; padding-left: 20px; bottom: 80px; background-color: #adc214; color: white; width: 200px; max-width: 100%; font-size: 20px; }
 .communities-upcoming-span-second				{ position: absolute; padding: 3px; padding-left: 20px; bottom: 30px; background-color: white; width: 180px; max-width: 100%; font-size: 18px; }
 
