@@ -9,15 +9,6 @@ $(document).ready(function (){
 		$(this).removeClass('show_info');
 	});
 	
-	// $('.communities-results-item').bind('mouseover', function() {
-		// $(this).find('div.color-back-dark-gray').slideToggle(500);
-	// });
-	
-	// $('.communities-results-item').bind('mouseout', function() {
-		// $(this).find('div.color-back-dark-gray').slideToggle(500);
-	// });
-	
-	
 });
 
 $(window).ready(function(){
@@ -49,14 +40,14 @@ function adjustDimensions(){
 	length = parseInt($('.customization-content').css('height'));
 	$("#customVerticalLine").css({'height': length + 150 + 'px'});
 	
-	length = $('.about-title-small-content').css('height');
-	$("#aboutVerticalLine").css({'height': length});
+	length = parseInt($('.about-title-small-content').css('height'));
+	$("#aboutVerticalLine").css({'height': length + 50 + 'px'});
 
 	length = parseInt($('.browstone-title-section').css('width'));
 	$(".browstone-title-hr").css({'width': length - 60 + 'px'});
 
-	length = $('.browstone-content-left').css('height');
-	$("#browstoneVerticalLine").css({'height': length});
+	length = parseInt($('.browstone-content-left-text-container').css('height'));
+	$("#browstoneVerticalLine").css({'height': length - 15 + 'px'});
 
 	length = $('.charitable-title-section').css('height');
 	$("#charitableVerticalLine").css({'height': length});
@@ -117,8 +108,8 @@ function adjustImagesDimenstions(){
 	
 	if($('.two-image-banner-section').length != 0){
 		$.each($('.two-image-banner-section').find('img'), function(index, element){
-			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
-				$(element).css({'width':'100%', 'height': 'auto'});
+			if(parseInt($(element).css('height')) < parseInt($(element).css('width'))){
+				$(element).css({'height':'100%', 'width': 'auto'});
 			}
 		});
 	}
@@ -200,6 +191,14 @@ function adjustImagesDimenstions(){
 		var difference = width - parentWidth;
 		$(element).css({'margin-left': -difference/2 + 'px' });
 	});
+
+	if($('.browstone-content-right').length != 0){
+		$.each($('.browstone-content-right').find('img'), function(index, element){
+			if(parseInt($(element).css('height')) > parseInt($(element).css('width'))){
+				$(element).css({'width':'100%', 'height': 'auto'});
+			}
+		});
+	}
 
 	if($('.news-content-item-image').length != 0){
 		$.each($('.news-content-item-image').find('img'), function(index, element){

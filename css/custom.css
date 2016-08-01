@@ -25,22 +25,22 @@
 .color-dark-gray			{ color: #9c9a99; }
 .color-red					{ color: #d34122; }
 
-.page-title					{ height:80px; width: 100%; margin-bottom: 10px; display: inline-table; }
+.page-title					{ height:80px; width: 100%; margin-bottom: 10px; display: inline-table; font-family: Montserrat-Light; }
 .page-title-side-container	{ background-color: #43566f; height: 90px; width: 15px; }
-.page-title-content			{ margin: 15px; max-width: 60%; text-align: right; }    
+.page-title-content			{ margin: 15px; max-width: 60%; text-align: right; font-family: Montserrat-Light; }    
 
-.quotes						{ width: 100%; display: inline-block; }
+.quotes						{ width: 100%; display: inline-block; letter-spacing: 4px;}
 .quotes-container			{ margin: auto; display: block; }
 .quote-left	> img			{ position: absolute; right: 0px; top: -10px; }
 .quote-right > img			{ position: absolute; left: 0px; }
 .quotes-container > .middle	{ padding: 0px;  }
 .quotes-text,
-.quotes-author				{ font-size: 22px; display: block; margin: 10px auto; float: left; text-transform: uppercase; width: 100%; }
-.quotes-author				{ font-size: 20px; }
+.quotes-author				{ font-size: 20px; display: block; margin: 10px auto; float: left; text-transform: uppercase; width: 100%; font-family: Montserrat-Light; }
+.quotes-author				{ font-size: 16px; font-family: Montserrat-SemiBold; }
 
 .two-image-banner-section				{ width: 100%; display: inline-block; margin-top: 30px; margin-bottom: 50px; }
 .two-image-banner-section	> div		{ height: 500px; float: left; overflow: hidden; width: 49%;}
-.two-image-banner-section	> div > img	{ height: 100%; float: left; }
+.two-image-banner-section	> div > img	{ width: 100%; float: left; }
 .two-image-banner-section-span-first	{ position: absolute; padding: 5px; padding-left: 20px; bottom: 80px; background-color: #d34122; color: white; width: 230px; max-width: 100%; font-size: 20px; }
 .two-image-banner-section-span-second	{ position: absolute; padding: 3px; padding-left: 20px; bottom: 30px; background-color: white; width: 180px; max-width: 100%; font-size: 18px; }
 
@@ -50,16 +50,40 @@
 .three-image-banner-section	> div:nth-child(2)	{ margin: 0% 2%; }
 
 .letter-space-big			{ letter-spacing: 8px; }
+.letter-space-small			{ letter-spacing: 4px; }
 
 /* #endregion Global */
 
+/* #region Fonts */
+
+@font-face {
+	font-family: MinionPro-Regular;
+    src: url(fonts/MinionPro-Regular.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(fonts/Montserrat-Light.otf);
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-Regular.otf);
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-Regular.otf);
+}
+
+/* #endregion Fonts */
 
 /* #region Header */
 
 .header								{ width: 100%; height:200px; }
 
 #brickhaus-menu						{ display: inline-block; list-style-type: none; padding-left: 0px; float: left; z-index: 100; position: absolute; top: 0px; }
-.menu-item							{ padding: 5px 20px; background-color: black; color: white; margin: 0px; font-size: 16px; cursor: pointer; }
+.menu-item							{ padding: 5px 20px; background-color: black; color: white; margin: 0px; font-size: 16px; cursor: pointer; font-family: Montserrat-Light; }
 h3.menu-item 						{ display: inline-block !important; display: inline-block;}
 li.menu-item 						{ padding-left: 40px !important; display: table;}
 li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
@@ -152,17 +176,18 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 .clifton-content-section,
 .coltman-content-section			{ display: inline-block; width: 100%; }
 .clifton-content-title,			
-.coltman-content-title				{ margin-bottom: 20px; margin-top: 5px; }
+.coltman-content-title				{ margin-bottom: 20px; margin-top: 5px; font-family: Montserrat-Light; }
 .clifton-content-title > span,
-.coltman-content-title > span		{ background-color: #43566f; color: white; padding: 4px; padding-bottom: 0px; }
+.coltman-content-title > span		{ background-color: #43566f; color: white; padding: 0px 4px; }
 .clifton-content-text,
-.coltman-content-text				{ margin: 10px 0px; display: inline-block; }
+.coltman-content-text				{ margin: 10px 0px; display: inline-block; font-family: Open Sans; }
+.coltman-content-text				{ margin: 10px 0px; display: inline-block; font-family: Open Sans; }
 .clifton-content-hrs,
 .coltman-content-hrs				{ display: inline-block; margin: 20px 0px; }
 .clifton-content-hrs > hr,
-.coltman-content-hrs > hr			{ border-top: 2px solid black; width: 50%; float: left; }
+.coltman-content-hrs > hr			{ border-top: 2px solid #b4b9c1; width: 50%; float: left; }
 .clifton-content-hrs > span,
-.coltman-content-hrs > span			{ text-transform: uppercase; font-size: 18px; color: #b4b9c1; width: 100%; display: inline-block; float: left; }
+.coltman-content-hrs > span			{ text-transform: uppercase; font-size: 16px; width: 100%; display: inline-block; float: left; font-family: Calibri; }
 
 /* #endregion Clifton & Coltman */
 
@@ -244,29 +269,31 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 
 /* #region About */
 
-.about-banner-section						{ display: inline-block; margin: 20px 0px; }
+.about-banner-section						{ display: inline-block; margin: 20px 0px; font-family: Montserrat-Light; }
 .about-banner-section > hr					{ border-top: 3px solid black; width: 100%; }
 .about-title-border							{ height: 100px; width: 15px; }
 
-.about-title-small-section					{ display: inline-block; width:100% }
-.about-title-small-content					{ width: 80%; margin-left: 15px; }
-.about-title-small-content > h2				{ margin-top: 75px; display: inline-block; }
-.about-title-small-content > span			{ display: inline-block; }
+.about-title-small-section					{ display: inline-block; width:100%; }
+.about-title-small-content					{ width: 70%; margin-left: 15px; margin-top: 50px }
+.about-title-small-content > h2				{ margin-top: 75px; display: inline-block; font-family: Montserrat-Light; }
+.about-title-small-content > span			{ display: inline-block; font-family: Open Sans; }
 
 .about-title-big-section					{ display: inline-block; width: 100%; }
-.about-title-big-section > h1				{ display: inline-block; margin-top: 55px; padding: 5px; }
-.about-title-big-section > hr				{ border-top: 2px solid black; width: 80%; margin-top: 0px; }
+.about-title-big-section 
+	> .about-title-border					{ width: 20px; }
+.about-title-big-section > h1				{ display: inline-block; margin-top: 55px; padding: 5px; width: 50%; text-align: right; font-family: Montserrat-Light; }
+.about-title-big-section > hr				{ border-top: 2px solid black; width: 66%; margin-top: 0px; }
 
 .about-content-section						{ display: inline-block; margin: 20px 0px; }
 .about-content-item							{ width: 100%; display: inline-block; margin-bottom: 20px; }
 .about-content-item-left					{ display: inline; width: 33%; float: left; }
 .about-content-item-right					{ display: inline; width: 64%; float: left; }
 .about-content-item-right-text				{ display: inline-block; width: 100%; }
-.about-content-item-right-text > span		{ display: inline-block; width: 80%; float: left;}	
-.about-content-item-title					{ display: inline-block; padding: 2px; color: white; margin-bottom: 20px; }
+.about-content-item-right-text > span		{ display: inline-block; width: 80%; float: left; font-family: Open Sans; }	
+.about-content-item-title					{ display: inline-block; padding: 6px; color: white; margin-bottom: 20px; font-family: Montserrat-Light; }
 .about-content-item-title-extension			{ width: 100% }
 
-#aboutVerticalLine							{ width: 1px; background-color: black; position: absolute; margin-left: -10px; }
+#aboutVerticalLine							{ width: 1px; background-color: black; position: absolute; margin-left: -10px; margin-top: -50px; }
 
 /* #endregion About */
 
@@ -298,7 +325,7 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 .browstone-banner							{ width: 100%; max-height: 600px; display: inline-block; margin: 40px 0px; padding: 0px 30px; overflow: hidden; }
 .browstone-banner > img						{ width: 100%; }
 
-.browstone-title-section					{ display: inline-block; width: 100%; margin-bottom: 20px; }
+.browstone-title-section					{ display: inline-block; width: 100%; margin-bottom: 20px; font-family: Montserrat-Light; }
 .browstone-title-section > h1,
 .browstone-title-section > h3				{ display: inline-block; margin-top: -5px; margin-bottom: 0px; padding: 10px; max-width: 350px; text-align: right; }
 .browstone-title-section > hr				{ border-top: 2px solid black; max-width: 100%; margin-top: 0px; margin-right: 15px;}
@@ -306,13 +333,14 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 
 .browstone-content-section					{ width: 100%; display: inline-block; margin: 30px 0px; }
 .browstone-content-right					{ display: inline-block; overflow: hidden; padding: 0px; }
-.browstone-content-right > img				{ max-width: 100%; padding-top: 20px; display: inline-block; }
+.browstone-content-right > img				{ width: 100%; padding-top: 20px; display: inline-block; }
 .browstone-content-left						{ display: inline-block; }
-.browstone-content-left-title				{ width: 100%; margin: 20px 0px; }
+.browstone-content-left-title				{ width: 100%; margin: 20px 0px; font-family: Montserrat-Light; }
+.browstone-content-left-title				{ width: 100%; margin: 20px 0px; font-family: Montserrat-Light; }
 .browstone-content-left-title > h3 > span	{ padding-left: 30px; color: white; }
 .browstone-content-left-text-container		{ padding-left: 0px; }
-.browstone-content-left-text-container > h3	{ margin-bottom: 0px; }
-.browstone-content-left-text				{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; }
+.browstone-content-left-text-container > h3	{ margin-bottom: 0px; font-family: Montserrat-Light; }
+.browstone-content-left-text				{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; font-family: Open Sans; }
 .browstone-content-left-sold				{ width: 180px; }
 .browstone-content-left-sold	> hr		{ border-top: 2px solid black; width: 100%; }
 
@@ -323,12 +351,14 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 /* #region Charitable */
 
 .charitable-title-section						{ display: inline-block; width: 100%; margin: 30px 0px; }
-.charitable-title-content > h1					{ display: inline-block; margin-top: -5px; margin-bottom: 0px; padding: 10px 0px; max-width: 700px; }
+.charitable-title-content > h1					{ display: inline-block; margin-top: -5px; margin-bottom: 0px; padding: 10px 0px; max-width: 700px; font-family: Montserrat-Light; }
 .charitable-title-border						{ height: 110px; width: 15px; position: absolute; }
 .charitable-title-content						{ display: inline-block; width: 100%; padding-left: 50px; }
-.charitable-title-text							{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; font-size: 16px; }
+.charitable-title-text							{ width: 100%; display: inline-block; margin-bottom: 20px; white-space: pre-line; font-size: 16px; font-family: Open Sans; }
 
 .charitable-content-section						{ display: inline-block; width: 100%; margin: 20px 0px; }
+.charitable-content-item						{ display: inline-block; }
+.charitable-content-item > img					{ display: inline-block; width: 100%; }
 
 #charitableVerticalLine							{ width: 2px; background-color: black; position: absolute; margin-left: -20px; }
 
@@ -337,24 +367,26 @@ hr.contact-form-wide-hr						{ width: 100% !important;  }
 /* #region Communities */
 
 .communities-title-section						{ display: inline-block; width: 100%; }
-.communities-title-section > hr					{ border-top: 3px solid black; width: 96%; }
+.communities-title-section > hr					{ border-top: 4px solid black; width: 96%; display: inline-block; }
+.communities-title-section-left	> h2			{ padding: 2px; padding-bottom: 4px; }				
 .communities-title-section-left,
-.communities-title-section-right				{ padding: 0px; margin-bottom: 10px; }
+.communities-title-section-right				{ padding: 0px; margin-bottom: 10px; font-family: Montserrat-Light; }
 .communities-title-section-left > h2 > span		{ display: inline-block; width: 100%; }
-.communities-title-colored						{ color: white; display: inline-block; }
+.communities-title-colored						{ color: white; display: inline-block; padding: 2px; padding-bottom: 4px; }
 
 .communities-title-text-container				{ display: inline-block; font-family: open-sans; font-size: 16px; }
+.communities-title-text							{ font-family: Open Sans; }
 .communities-title-content						{ padding-left: 20px; }
 .communities-title-content > span				{ display: inline-block; width: 70%; }
 
 .communities-side-title							{ display: inline-block; width: 100%; text-align: right;}
 .communities-title-border						{ height: 100px; width: 15px; }
-.communities-side-title > h1						{ margin-top: 65px; margin-left: 10px; }
+.communities-side-title > h1						{ margin-top: 65px; margin-left: 10px; font-family: Montserrat-Light; }
 
 .communities-filters-section					{ min-height: 100px; width:100%; display: inline-block; text-align: center; overflow: auto; padding-top: 20px; margin-top: 40px;}
 .communities-filters-section > a					{ display: inline-block; margin: 10px 20px; color: black; text-decoration: none; }
 .communities-filters-section > a.active			{ color: #d34122; }
-.communities-filters-section > a > h3			{ margin: 5px 20px }
+.communities-filters-section > a > h3			{ margin: 5px 20px; font-family: Montserrat-Light;  }
 .communities-filters-all						{ border: 1px solid #d34122; }
 
 .communities-banner-section,					
