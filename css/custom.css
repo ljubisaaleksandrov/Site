@@ -11,11 +11,13 @@
 
 .color-back-pink			{ background-color: pink; }
 .color-back-green			{ background-color: #adc214; }
+.color-back-light-green		{ background-color: #d6d99e; }
 .color-back-light-blue		{ background-color: #b4b9c1; }
 .color-back-dark-blue		{ background-color: #43566f; }
 .color-back-light-gray		{ background-color: #ccc7c4; }
 .color-back-dark-gray		{ background-color: #9c9a99; }
 .color-back-red				{ background-color: #d34122; }
+.color-back-light-red		{ background-color: #eb9e7d; }
 
 .color-pink					{ color: pink; }
 .color-green				{ color: #adc214; }
@@ -151,7 +153,14 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 .front-page-content-communities-title		{ text-transform: uppercase; font-size: 30px; padding-top: 20px; text-align: center; font-family: Montserrat-Light; }	
 .front-page-content-communities-text		{ font-family: Open Sans; }
 .front-page-content-communities-links		{ padding-left: 40px; text-align: center; }
+.front-page-content-communities-links
+	> div.color-back-light-red:hover		{ background-color: #d34122}
+.front-page-content-communities-links
+	> div.color-back-light-green:hover		{ background-color: #adc214}
+.front-page-content-communities-links
+	> div.color-back-light-gray:hover		{ background-color: #9c9a99}
 .front-page-content-communities-links > hr	{ border-top: 2px solid black; }
+
 #commVerticalLineUp							{ height: 100%; width: 2px; background-color: black; position: absolute; }
 
 .front-page-explore-section					{ margin-bottom: 40px; margin-top: 10px; }
@@ -171,7 +180,9 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 .front-page-featured-item-image > img		{ width:100%; }
 .front-page-featured-item-image-text		{ position: absolute; bottom: 0px; overflow: hidden; height: 100px; z-index: 1000; background-color: #ccc; font-size: 22px; text-align: center; padding-top: 30px; }
 .front-page-featured-item-image-text > span	{ text-transform: uppercase; display: block; color: white }
-.front-page-featured-item-image-text > a		{ display: block; color: #d34122; }
+.front-page-featured-item-image-text > a		{ display: inline-block; color: #d34122; text-decoration: none; }
+.front-page-featured-item-image-text 
+		> a:hover							{ color: black; }
 
 /* #endregion Front Page */
 
