@@ -101,17 +101,17 @@ li.one-line							{ clear: both; display: inline-block; white-space: nowrap; }
 
 .footer								{ width: 100%; display: inline-block; margin-top:30px; color: white; }
 .footer-content						{ background-color: black; padding: 30px 20px; overflow: auto; }
-.footer-content-info > h3			{ margin-bottom: 0px; }
-.footer-content-info-item			{ display: block; margin: 10px 0px; width: 100%; float: left; }
-.footer-content-info-item > hr		{ width: 100%; float: left; margin-top: 0px; }
+.footer-content-info > h3			{ margin-bottom: 0px; font-family: Montserrat-Light; }
+.footer-content-info-item			{ display: block; margin: 10px 0px; width: 100%; float: left; font-family: Open Sans; }
+.footer-content-info-item > hr		{ border-top: 3px solid white; width: 100%; float: left; margin-top: 0px; }
 .footer-content-info-social			{ display: block; margin: 10px 0px; float: left; }
 .footer-content-info-social	> a > img	{ vertical-align: baseline; padding: 5px; margin-right:5px; }
 
-.footer-content-post-form > h3		{ margin-bottom: 0px; }
+.footer-content-post-form > h3		{ margin-bottom: 0px; font-family: Montserrat-Light; }
 .footer-content-post-form > hr		{ width: 80%; }
-.footer-content-post-form-item-short{ display: block; width: 50%; background-color: black; color: white; margin: 20px 0px; padding: 1px 6px; border: 1px solid white}
-.footer-content-post-form-message	{ display: block; width: 100%; background-color: black; color: white; margin-top: 20px; padding: 1px 6px; resize: none; }
-.footer-content-post-form-button	{ float: right; background-color: #d34122; border: 0px; width: 80px; margin-top: 15px; }
+.footer-content-post-form-item-short{ display: block; width: 50%; background-color: black; color: white; margin: 20px 0px; padding: 1px 6px; border: 1px solid white; font-family: Open Sans; }
+.footer-content-post-form-message	{ display: block; width: 100%; background-color: black; color: white; margin-top: 20px; padding: 1px 6px; resize: none; font-family: Open Sans; }
+.footer-content-post-form-button	{ float: right; background-color: #d34122; border: 0px; width: 80px; margin-top: 15px; font-family: Open Sans; }
 
 #footerVerticalLine					{ width: 2px; background-color: white; margin: auto; }
 
@@ -509,11 +509,11 @@ video {
 
 .news-content-section				{ display: inline-block; width: 100%; padding: 15px 25px; margin-top: 20px; }
 .news-content-item					{ display: inline-block; background-color: white; padding: 0px; border: 10px solid #9c9a99; height: 425px; overflow: hidden; }
-.news-content-item-text-container	{ display: inline-block; width: 100%; height: 245px; }
+.news-content-item-text-container	{ display: inline-block; width: 100%; height: 245px; font-family: Montserrat-Light; }
 .news-content-item-title			{ display: inline-block; margin: 10px 20px; text-transform: uppercase; margin-bottom: 0px; height: 90px; }
 .news-content-item-text				{ display: inline-block; margin: 10px 20px; margin-bottom: 0px; height: 80px; }
-.news-content-item-text > span		{ display: inline-block; }
-.news-content-item-read-more		{ display: inline-block; margin: 10px 20px; }
+.news-content-item-text > span		{ display: inline-block; font-family: Open Sans; }
+.news-content-item-read-more		{ display: inline-block; margin: 10px 20px; font-size: 18px; }
 .news-content-item-image			{ display: inline-block; width: 100%; height: 180px; }
 .news-content-item-image > img		{ display: inline-block; width: 100%; }
 

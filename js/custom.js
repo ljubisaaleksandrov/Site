@@ -35,6 +35,13 @@ function adjustDimensions(){
 		$("#verticalLineDown > div").css({'left': '40px'}); 
 	}
 	
+	if($(window).width() < 992){
+		$("#footerVerticalLine").css({'display': 'none'}); 
+	}
+	else{
+		$("#footerVerticalLine").css({'display': 'block'}); 
+	}
+	
 	length = $(".footer-content-info").css('height');
 	$("#footerVerticalLine").css({'height':length});
 
