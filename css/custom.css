@@ -519,11 +519,22 @@ video {
 
 /* #endregion News */
 
+/* #region Bios */
 
+.bios-content-section				{ display: inline-block; width: 100%; }
+.bios-members-item					{ margin-bottom: 30px; margin-top: 20px; }
+.bios-members-item-image			{ width: 100%; overflow: hidden; margin-bottom: 10px; display: inline-block; }
+.bios-members-item-image > img		{ width: 100%; }
+.bios-memeber-item-name,
+.bios-memeber-item-position			{ margin: 15px 0px; text-align: center; text-transform: uppercase; }
+.bios-memeber-item-name				{ font-size: 18px; font-weight: bold; font-family: Montserrat-Light; }
+.bios-memeber-item-position			{ font-size: 14px; color: #ccc7c4; font-family: Montserrat-Light; }
+.bios-memeber-item-links 			{ text-align: center; margin-top: 30px; }
+.bios-memeber-item-links > a 		{ text-decoration: none; }
+.bios-memeber-item-links > a > img	{ height: 20px; margin: 0px 10px; }
+.bios-members-text					{ padding-left: 25px; display: inline-block; white-space: pre-line; font-size: 16px; }
 
-
-
-
+/* #endregion Bios */
 
 
 

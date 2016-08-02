@@ -144,6 +144,16 @@ function adjustImagesDimenstions(){
 		}
 	});
 	
+	$.each($('.bios-members-item-image'), function(index, element){
+		$(element).css('height', $(element).css('width'));
+		var image = $(element).find('img');
+
+		if(parseInt($(image).css('height')) < parseInt($(image).css('width'))){
+			var difference = parseInt($(image).css('width')) - parseInt($(image).css('height'));
+			$(image).css({'height':'100%', 'width': 'auto', 'margin-left': -difference/2 });
+		}
+	});
+	
 	$.each($('.communities-results-item-image'), function(index, element){
 		$(element).css('height', $(element).css('width'));
 		var image = $(element).find('img');
