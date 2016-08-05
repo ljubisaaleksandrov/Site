@@ -50,7 +50,7 @@
             sub.find('> ul > li').each(function(subidx) {
                 var item = $(this);
 				var href = $(this).children('a').attr('href');
-				var hrefActive = $.session.get('active-index');
+				var hrefActive = window.location.pathname; // Returns path only
 
 				item.addClass('menu-item');
                 if (item.hasClass(self.options.activeClass)) {
@@ -103,7 +103,7 @@
         });
         sub.find('> h3').on('click', function(event) {
 			var href = $(this).children('a').attr('href');
-			$.session.set('active-index', href);
+			// $.session.set('active-index', href);
 			window.location = href;
 			
 			$.each($("." + self.options.activeClass), function(index, element){
@@ -120,7 +120,7 @@
 			});
 			
 			var href = $(this).children('a').attr('href')
-			$.session.set('active-index', href);
+			// $.session.set('active-index', href);
 
 			$(this).addClass(self.options.activeClass);
 			window.location = href;
@@ -131,7 +131,8 @@
     Plugin.prototype._arrowBtn = function(parent) {
 		var link = $(parent).children('a')[0];
 		var href = $(link).attr('href');
-		var hrefActive = $.session.get('active-index');
+		var hrefActive = window.location.pathname; // Returns path only
+		// var hrefActive = $.session.get('active-index');
 		$(link).addClass('arrow-btn');
 
 		return href == hrefActive;
